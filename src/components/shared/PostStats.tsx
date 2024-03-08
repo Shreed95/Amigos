@@ -41,7 +41,7 @@ const PostStats = ({ post, userId }: PostStatsProps) => {
             newLikes.push(userId)
         }
         setLikes(newLikes);
-        likePost({ postId: post.$id, likesArray: newLikes })
+        likePost({ postId: post?.$id || '', likesArray: newLikes })
     };
 
     const handleSavedPost = (e: React.MouseEvent) => {
